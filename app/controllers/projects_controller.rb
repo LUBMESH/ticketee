@@ -47,6 +47,11 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+  def project_params
+    params.require(:project).permit(:name, :description)
+  end
+
   def set_project
     @project = Project.find(params[:id])
   rescue ActiveRecord::RecordNotFound
@@ -54,8 +59,5 @@ class ProjectsController < ApplicationController
     redirect_to projects_path
   end
 
-  def project_params
-    params.require(:project).permit(:name, :description)
-  end
 end
 
