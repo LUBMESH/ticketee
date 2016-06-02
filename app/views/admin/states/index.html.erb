@@ -5,7 +5,7 @@
 		<li><%= link_to "New State", new_admin_state_path, class: "new" %></li>
 	</ul>
 
-	<ul class="states">
+	<ul id="states">
 		<% @states.each do |state| %>
 		<li>
 			<%= render "states/state", state: state %>
