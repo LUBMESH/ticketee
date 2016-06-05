@@ -27,6 +27,7 @@ gem 'pundit', '~> 0.3.0'
 
 gem "carrierwave", "~> 0.10.0"
 
+gem "searcher", github: "radar/searcher"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
