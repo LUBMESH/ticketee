@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.3.0
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: JTi/kMoGRpjnkiTQuRpZUGnz1jFI2l7zYgTkPEwNsDDDdoNGsZhEQVxR+U8USN6yIIkEDusHxueILzBSFTtONsXjbTHg7bA1rswhmGImWrIwGhwVBjeTAdTDniadjlc4mNH7AuhcS9kCkl3IyKu/o8SsSdjIBmyMdTeL1XViJGOzVXKXwysPBt5uQ/0riDSEvv9o2QZ/ncwMY6I1vvCxeth6QtFHrNLZy96AuXx2sit5+iSUY+xnMJItK9ywQZQsXYw1iL9QyvVZLeK/BgLKkYPTlrMv57oNqj5neTACdbWRZSAwXiBaPA7Zgt0ItPrb/y+ly2zTYZdzTVABI1S/qHAhwe9EcIHwzt8RuQ3WHQKtQdz1sPB+h9wLXyaum5Aqabtwq02P+QDTwwc0FWIDKC0nr/+lwmfH95Nn2oQohzSzLO0YXHpgobD7c8RRWwYvC+vLLUZa2Dzx0l1J3+1gv/NeaSlzfApTg8ZWyAndknOnCAu5LCqXcxAnMGtRZW7lAXcabgeNu6/84UcORH62FQ6CBPdFIVYtOjv4X7aTWyTtQcmvwBFtEJTHcXFm7yImksq2sCM+bNPlVxQYhQYQsvh8GZY+/RVRWX+dK44IZ5/5H2mgtkKmHrVbVwpiCitXAHDLLRo105jM5lDqWCi0ct9Q6eAH5Ht9kQH0bPrfiuE=
+  app: morning-lake-21215
+  on:
+    repo: Lubmes/ticketee
